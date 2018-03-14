@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Repositories</string>
+
+    <string name="format_star_count">Star Count: %d</string>
+    <string name="format_rank">Rank: %d</string>
+    <string name="format_created_At">Created: %1$s</string>
+    <string name="format_updated_At">Updated: %1$s</string>
 </resources>

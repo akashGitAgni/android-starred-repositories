@@ -12,15 +12,18 @@ open class Repository : RealmObject() {
 
     var name: String = ""
     @SerializedName("full_name")
-    var fullName: String = ""
+    var fullName: String? = ""
 
     @SerializedName("html_url")
-    var htmlUrl: String = ""
+    var htmlUrl: String? = ""
 
-    var description: String = ""
+    var description: String? = ""
 
     @SerializedName("created_at")
     var createdDate: Date? = null
+
+    @SerializedName("updated_at")
+    var updatedDate: Date? = null
 
     @SerializedName("stargazers_count")
     var starsCount: Long = 0

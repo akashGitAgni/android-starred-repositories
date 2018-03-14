@@ -18,7 +18,8 @@ interface GithubTopicApi {
     @GET("repositories")
     fun getCycleDetail(@Query("q") topic: String,
                        @Query("sort") sort: String,
-                       @Query("order") order: String): Call<JsonData>
+                       @Query("order") order: String,
+                       @Query("page") page: Int): Call<JsonData>
 
 }
 

@@ -16,7 +16,7 @@ object AppNetwork {
     /**
      * Maximum time in milliseconds to wait while connecting.
      */
-    private const val TIMEOUT_CONNECT = 30000
+    private const val TIMEOUT_CONNECT = 20000
 
     /**
      * Maximum time in milliseconds to wait for an InputStream read to complete.
@@ -72,6 +72,7 @@ object AppNetwork {
         val builder = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(client)
+                .addConverterFactory(NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
 
         return builder.build()

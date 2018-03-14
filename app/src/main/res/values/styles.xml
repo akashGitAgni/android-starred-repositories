@@ -8,4 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="cardStyleTitle">
+        <item name="android:textColor">@color/opaque_darkest_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cardStylezBlueTitle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cardStyleSubtitle">
+        <item name="android:textColor">@color/opaque_light_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>
