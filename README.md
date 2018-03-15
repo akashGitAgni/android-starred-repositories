@@ -1,4 +1,4 @@
-An application to display top 120 popular Android repositotries.
+# An application to display top 120 popular public Android repositories.
 
 Applications pulls and displays following information about Repository:
   - id
@@ -24,6 +24,10 @@ User can tap on the item, which will open a webview and take user to the reposit
 Project contains some Unit tests and Instrumentation tests.
 Project is also set-up for proguard ,if we build a release build.
 
-Download debug apk from https://www.bitrise.io/artifact/4889984/p/841267a2e5f45ae128286b1e7294b6ea
-
+ # Installation
+  - Download debug apk from https://www.bitrise.io/artifact/4889984/p/841267a2e5f45ae128286b1e7294b6ea
+  - Use adb install path-to-file to install the application.
+   or 
+  - Open the above link in a mobile device to install the apk directly.
+ 
  
