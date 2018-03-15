@@ -28,7 +28,7 @@ class RepositoryListActivity : AppCompatActivity(), OnClickListener {
         val fm = supportFragmentManager
         fm.findFragmentById(R.id.fragment) ?: let {
             val fragment = RepositoryListFragment.newInstance()
-            fm.beginTransaction().add(R.id.fragment, fragment).addToBackStack(null).commit()
+            fm.beginTransaction().add(R.id.fragment, fragment).commit()
         }
 
     }
