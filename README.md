@@ -22,5 +22,6 @@ User can tap on the item, which will open a webview and take user to the reposit
 - User can pull the recyclerview from top to update the recyclerview.
 
 Project contains some Unit tests and Instrumentation tests.
+Project is also set-up for proguard ,if we build a release build.
 
  
