@@ -68,17 +68,17 @@ internal class RepositoryRecyclerViewAdapter(data: OrderedRealmCollection<Reposi
             holder.title.text = name.toUpperCase()
             holder.description.text = description
             val format = context.getString(R.string.format_star_count)
-            holder.starCount.text = String.format(format, starsCount)
+            holder.starCount.text = String.format(format, position + 1, starsCount)
 
             val rankFormat = context.getString(R.string.format_rank)
-            holder.rank.text = String.format(rankFormat, position + 1)
+            holder.id.text = String.format(rankFormat, id)
 
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)
             val time = sdf.format(createdDate)
             val created = context.getString(R.string.format_created_At)
             holder.createdAt.text = String.format(created, time)
 
-            val updateTime = sdf.format(updatedDate)
+            val updateTime = sdf.format(lastPushDate)
             val updated = context.getString(R.string.format_updated_At)
             holder.updatedAt.text = String.format(updated, updateTime)
 
@@ -102,7 +102,7 @@ internal class RepositoryRecyclerViewAdapter(data: OrderedRealmCollection<Reposi
         var description: TextView = view.findViewById(R.id.subtitle)
 
         var starCount: TextView = view.findViewById(R.id.star_count)
-        var rank: TextView = view.findViewById(R.id.rank)
+        var id: TextView = view.findViewById(R.id.repo_id)
         var updatedAt: TextView = view.findViewById(R.id.updated_date)
         var createdAt: TextView = view.findViewById(R.id.created_date)
         var data: Repository? = null

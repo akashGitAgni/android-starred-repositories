@@ -2,8 +2,6 @@ package com.android.repos.network
 
 import android.annotation.SuppressLint
 import android.app.Application
-import com.squareup.picasso.OkHttp3Downloader
-import com.squareup.picasso.Picasso
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -25,22 +23,8 @@ object AppNetwork {
 
     var client: OkHttpClient
 
-    @SuppressLint("StaticFieldLeak")
-    lateinit var picasso: Picasso
-
     init {
         client = initClient()
-    }
-
-    fun initPicasso(application: Application) {
-        picasso = Picasso.Builder(application)
-                .downloader(OkHttp3Downloader(client))
-                .listener { _, _, exception ->
-                    exception.printStackTrace()
-                }.build()
-
-        picasso.setIndicatorsEnabled(true)
-        picasso.isLoggingEnabled = true
     }
 
     private fun initClient(): OkHttpClient {

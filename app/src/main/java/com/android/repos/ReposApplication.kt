@@ -11,8 +11,6 @@ class ReposApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        AppNetwork.initPicasso(this)
-
         Realm.init(this)
         val config = RealmConfiguration.Builder()
                 .deleteRealmIfMigrationNeeded()

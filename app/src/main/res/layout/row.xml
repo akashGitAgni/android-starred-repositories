@@ -25,10 +25,10 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Star Count" />
+            tools:text="Stars" />
 
         <TextView
-            android:id="@+id/rank"
+            android:id="@+id/repo_id"
             style="@style/cardStylezBlueTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Rank" />
+            tools:text="Id" />
 
         <TextView
             android:id="@+id/title"
