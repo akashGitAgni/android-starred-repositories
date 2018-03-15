@@ -39,6 +39,12 @@ class ReposActivityViewModel(application: Application) : AndroidViewModel(applic
             Timber.d("repoList Size of list in viewmodel %s", it.size);
             if (it.size > 0) {
                 reposLoaded.value = true
+
+
+
+
+
+                      
             } else {
                 reposLoaded.value = false
                 performFullSync()
