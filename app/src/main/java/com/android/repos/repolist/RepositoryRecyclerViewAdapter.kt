@@ -28,6 +28,7 @@ import com.android.repos.dao.Repository
 
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -77,12 +78,14 @@ internal class RepositoryRecyclerViewAdapter(data: OrderedRealmCollection<Reposi
             val created = context.getString(R.string.format_created_At)
             holder.createdAt.text = String.format(created, time)
 
+            val updateTime = sdf.format(updatedDate)
             val updated = context.getString(R.string.format_updated_At)
-            holder.updatedAt.text = String.format(updated, time)
+            holder.updatedAt.text = String.format(updated, updateTime)
 
             holder.itemView.setOnClickListener({
-                holder.data?.htmlUrl?.apply {
-                    clickListener.repositoryClicked(this)
+                holder.data?.apply {
+                    Timber.d("onlcick Url %s", this.htmlUrl)
+                    clickListener.repositoryClicked(this.htmlUrl, this.name.toUpperCase())
                 }
 
             })

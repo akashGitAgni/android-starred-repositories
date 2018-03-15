@@ -14,13 +14,11 @@ class NetworkTest {
 
         val api = retrofit.create(GithubTopicApi::class.java)
 
-        val json = api.getCycleDetail("topic:Android", "stars", "desc").execute()
+        val json = api.getCycleDetail("topic:Android", "stars", "desc", 2).execute()
         assertNotNull(json)
         val body = json.body()
         assertNotNull(body)
         println(body?.totalCount)
         assert(body?.totalCount == body?.items?.size)
-
-
     }
 }
