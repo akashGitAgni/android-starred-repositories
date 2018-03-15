@@ -21,6 +21,6 @@ User can tap on the item, which will open a webview and take user to the reposit
 - Application has a swipe to refresh feature for continuous update.
 - User can pull the recyclerview from top to update the recyclerview.
 
-
+Project contains some Unit tests and Instrumentation tests.
 
  
