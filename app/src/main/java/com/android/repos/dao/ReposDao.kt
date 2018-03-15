@@ -19,4 +19,16 @@ public class ReposDao(val realm: Realm) {
         return null
 
     }
+
+    fun getAllReposSynchronous(): RealmResults<Repository>? {
+
+        try {
+            return realm.where(Repository::class.java).sort("starsCount", Sort.DESCENDING).findAllAsync()
+        } catch (e: IllegalArgumentException) {
+            Timber.e(e, "Error getting all cycle from Realm")
+        }
+
+        return null
+
+    }
 }

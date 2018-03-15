@@ -17,8 +17,6 @@ import timber.log.Timber
 
 class ReposActivityViewModel(application: Application) : AndroidViewModel(application) {
 
-//    var workoutLiveData: MutableLiveData<WorkoutViewModel> = MutableLiveData()
-
     val realm: Realm = Realm.getDefaultInstance()
     val reposDao: ReposDao = ReposDao(realm)
 
@@ -39,12 +37,6 @@ class ReposActivityViewModel(application: Application) : AndroidViewModel(applic
             Timber.d("repoList Size of list in viewmodel %s", it.size);
             if (it.size > 0) {
                 reposLoaded.value = true
-
-
-
-
-
-                      
             } else {
                 reposLoaded.value = false
                 performFullSync()
