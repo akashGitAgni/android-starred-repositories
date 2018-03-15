@@ -24,4 +24,6 @@ User can tap on the item, which will open a webview and take user to the reposit
 Project contains some Unit tests and Instrumentation tests.
 Project is also set-up for proguard ,if we build a release build.
 
+Download debug apk from https://www.bitrise.io/artifact/4889984/p/841267a2e5f45ae128286b1e7294b6ea
+
  
