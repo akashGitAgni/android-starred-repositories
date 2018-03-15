@@ -25,7 +25,7 @@ Project contains some Unit tests and Instrumentation tests.
 Project is also set-up for proguard ,if we build a release build.
 
  # Installation
-  - Download debug apk from https://www.bitrise.io/artifact/4890391/p/af4be9cb6537696efe6bd1ef39efe261
+  - Download debug apk from https://www.bitrise.io/artifact/4905535/p/9b15f7dd4d0e8809b7c4aee1484766a9
   - Use adb install path-to-file to install the application.
    or 
   - Open the above link in a mobile device to install the apk directly.
